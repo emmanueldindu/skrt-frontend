@@ -1,0 +1,25 @@
+html
+body{
+    /* background-color: rgb(235, 235, 235); */
+    /* background-color: rgb(1, 1, 7);; */
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.app{
+    height: 100%;
+    width: 100%;
+    /* color:  #1c1e21; */
+    /* color: #000000; */
+    /* color: #03c9d7; */
+    /* color: rgb(33, 77, 197);  */
+    /* color: #99EEFD; */
+    /* color: red; */
+}
+
+
+
+
+.try{
+    transition: ease-in-out 2s;
+}
