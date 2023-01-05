@@ -29,7 +29,8 @@ const AdvertWidget = () => {
           <Typography color={medium}>github.com/emmanueldindu</Typography>
         </FlexBetween>
         <Typography color={medium} m="0.5rem 0">
-         I'm a peal fullstark developer. I solve problems with codes, I'm open to Job opportunities and gigs. send me a mail at emmanuelnwobodoc04@gmail.com
+          I'm a peal fullstack developer. I solve problems with codes, I'm open to Job opportunities and gigs. send me a mail at emmanuelnwobodoc04@gmail.com
+          
         </Typography>
       </WidgetWrapper>
 )

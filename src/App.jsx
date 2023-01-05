@@ -14,6 +14,7 @@ import Navbar from './navbar/Navbar'
 // import Navbar from './scenes/navbar'
 
 function App() {
+// i wanna test my commit
 
   const mode = useSelector((state) => state.mode)
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
