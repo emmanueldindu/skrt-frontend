@@ -9,9 +9,9 @@ import { useSelector } from 'react-redux'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
 import { themeSettings } from './theme';
-import Navbar from './navbar/Navbar'
 
-// import Navbar from './scenes/navbar'
+
+
 
 function App() {
 // i wanna test my commit
@@ -27,7 +27,7 @@ const isAuth = Boolean(useSelector((state) => state.token))
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
-            {/* <Navbar /> */}
+           
           <Route path='/' element={<LoginPage />} />
             <Route path='/home'
               element={isAuth ? <HomePage /> : <Navigate to ="/" />}          />
