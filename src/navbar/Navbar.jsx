@@ -182,7 +182,7 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <ChatBubbleOutlineOutlinedIcon sx={{ fontSize: "25px", color: "red" }} />
+            <ChatBubbleOutlineOutlinedIcon sx={{ fontSize: "25px"}} />
             <NotificationsOutlinedIcon sx={{ fontSize: "25px" }} />
             <Help sx={{ fontSize: "25px" }} />
             <FormControl variant="standard" value={fullName}>
