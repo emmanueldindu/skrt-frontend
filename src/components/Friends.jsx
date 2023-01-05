@@ -24,7 +24,7 @@ const formatDate = date.toLocaleString();
   
     const patchFriend = async () => {
       const response = await fetch(
-        `http://localhost:3001/users/${_id}/${friendId}`,
+        `https://skrtapp.onrender.com/users/${_id}/${friendId}`,
         {
           method: "PATCH",
           headers: {
