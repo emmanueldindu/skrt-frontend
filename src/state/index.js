@@ -7,7 +7,7 @@ const initialState = {
   posts: [],
 };
 
-
+// i edited the gitignore
 export const authSlice = createSlice({
   name: "auth",
   initialState,
