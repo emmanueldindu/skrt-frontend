@@ -11,7 +11,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getPosts = async () => {
-    const response = await fetch("https://sktapp.onrender.com/posts", {
+    const response = await fetch("https://skrt-api-backend.onrender.com/posts", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -21,7 +21,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `https://sktapp.onrender.com/posts/${userId}/posts`,
+      `https://skrt-api-backend.onrender.com${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

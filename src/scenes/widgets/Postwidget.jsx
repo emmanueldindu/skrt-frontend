@@ -41,7 +41,7 @@ const posts = useSelector((state) => state.posts)
 
 
   const patchLike = async () => {
-    const response = await fetch(`https://sktapp.onrender.com/${postId}/like`, {
+    const response = await fetch(`https://skrt-api-backend.onrender.com/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -73,7 +73,7 @@ const posts = useSelector((state) => state.posts)
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://sktapp.onrender.com/assets/${picturePath}`}
+          src={`https://skrt-api-backend.onrender.com/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">

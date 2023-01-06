@@ -32,7 +32,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
 
   const getUser = async () => {
-    const response = await fetch(`https://sktapp.onrender.com/users/${userId}`, {
+    const response = await fetch(`https://skrt-api-backend.onrender.com/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     
