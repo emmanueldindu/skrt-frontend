@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.4e830669.css",
-    "main.js": "/static/js/main.31bd2094.js",
+    "main.js": "/static/js/main.23e71c59.js",
     "static/media/lapi.jpg": "/static/media/lapi.467ac2ac7770ba3137ef.jpg",
     "index.html": "/index.html",
     "main.4e830669.css.map": "/static/css/main.4e830669.css.map",
-    "main.31bd2094.js.map": "/static/js/main.31bd2094.js.map"
+    "main.23e71c59.js.map": "/static/js/main.23e71c59.js.map"
   },
   "entrypoints": [
     "static/css/main.4e830669.css",
-    "static/js/main.31bd2094.js"
+    "static/js/main.23e71c59.js"
   ]
 }
