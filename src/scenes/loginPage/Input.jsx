@@ -98,6 +98,8 @@ const Input = () => {
             token: loggedIn.token,
           })
         );
+
+      await localStorage.setItem("token", loggedIn.token);
         navigate("/home");
       }
     };
