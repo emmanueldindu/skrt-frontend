@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
 import { themeSettings } from './theme';
+import { useEffect } from 'react'
 
 
 
@@ -20,7 +21,9 @@ function App() {
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
 const isAuth = Boolean(useSelector((state) => state.token))
   
-
+useEffect(() => {
+  localStorage.setItem("token", isAuth);
+}, [isAuth]);
   return (
     <div className='app'>
       <BrowserRouter>
