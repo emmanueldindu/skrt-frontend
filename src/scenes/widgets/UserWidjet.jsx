@@ -23,7 +23,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null)
   const { palette } = useTheme()
   const navigate = useNavigate()
-  const token = useSelector((state) => state.token);
+  let token = localStorage.getItem("token")
   const client = useSelector((state) => state.user)
   const dark = palette.neutral.dark
   const medium = palette.neutral.medium

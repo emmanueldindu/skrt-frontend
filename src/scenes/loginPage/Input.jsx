@@ -99,7 +99,7 @@ const Input = () => {
           })
         );
 
-      await localStorage.setItem("token", loggedIn.token);
+       localStorage.setItem("token", loggedIn.token);
         navigate("/home");
       }
     };

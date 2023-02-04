@@ -10,7 +10,7 @@ function FriendLisWidget({ userId }) {
     
     const dispatch = useDispatch();
     const { palette } = useTheme();
-    const token = useSelector((state) => state.token);
+    let token = localStorage.getItem("token")
     const friends = useSelector((state) => state.user.friends);
   
     const getFriends = async () => {

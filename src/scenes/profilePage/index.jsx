@@ -12,7 +12,8 @@ import UserWidget from '../widgets/UserWidjet'
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const { userId } = useParams();
-  const token = useSelector((state) => state.token);
+  // const token = useSelector((state) => state.token);
+  let token = localStorage.getItem("token")
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   const getUser = async () => {

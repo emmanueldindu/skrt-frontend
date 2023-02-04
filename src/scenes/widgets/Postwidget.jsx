@@ -30,7 +30,7 @@ const PostWidget = ({
   const [isComments, setIsComments] = useState(false)
   
   const dispatch = useDispatch();
-  const token = useSelector((state) => state.token);
+  let token = localStorage.getItem("token")
 const posts = useSelector((state) => state.posts)
   const loggedInUserId = useSelector((state) => state.user._id)
   const likeCount = Object.keys(likes).length

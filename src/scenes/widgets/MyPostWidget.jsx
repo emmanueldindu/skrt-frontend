@@ -36,7 +36,7 @@ function MyPostWidget({ picturePath }) {
     const [post, setPost] = useState("")
     const { palette } = useTheme()
     const { _id } = useSelector((state) => state.user)
-    const token = useSelector((state) => state.token)
+    let token = localStorage.getItem("token")
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)")
     const mediumMain = palette.neutral.mediumMain; 
     const medium = palette.neutral.main
