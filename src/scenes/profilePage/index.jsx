@@ -12,9 +12,17 @@ import UserWidget from '../widgets/UserWidjet'
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const { userId } = useParams();
-  // const token = useSelector((state) => state.token);
-  let token = localStorage.getItem("token")
+  const token = useSelector((state) => state.token);
+  // let token = localStorage.getItem("token")
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+
+
+  useEffect(() => {
+    localStorage.setItem("token", token);
+    console.log(token)
+  }, [token]);
+
+
 
   const getUser = async () => {
     const response = await fetch(`https://skrt-api-backend.onrender.com/users/${userId}`, {

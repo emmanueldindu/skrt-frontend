@@ -1,4 +1,4 @@
-import { React , useState} from 'react'
+import { React , useState, useEffect} from 'react'
 import {
     EditOutlined,
     DeleteOutlined,
@@ -36,11 +36,17 @@ function MyPostWidget({ picturePath }) {
     const [post, setPost] = useState("")
     const { palette } = useTheme()
     const { _id } = useSelector((state) => state.user)
-    let token = localStorage.getItem("token")
+    const token = useSelector((state) => state.token)
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)")
     const mediumMain = palette.neutral.mediumMain; 
     const medium = palette.neutral.main
     
+  
+    useEffect(() => {
+      localStorage.setItem("token", token);
+    }, [token]);
+  
+  
     const handlePost = async () => {
         const formData = new FormData()
         formData.append("userId", _id)

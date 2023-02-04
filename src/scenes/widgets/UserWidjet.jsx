@@ -23,14 +23,17 @@ const UserWidget = ({ userId, picturePath }) => {
   const [user, setUser] = useState(null)
   const { palette } = useTheme()
   const navigate = useNavigate()
-  let token = localStorage.getItem("token")
+  const token = useSelector((state) => state.token);
   const client = useSelector((state) => state.user)
   const dark = palette.neutral.dark
   const medium = palette.neutral.medium
   const main = palette.neutral.main;
 
 
-
+  useEffect(() => {
+    localStorage.setItem("token", token);
+  }, [token]);
+  
   const getUser = async () => {
     const response = await fetch(`https://skrt-api-backend.onrender.com/users/${userId}`, {
       method: "GET",

@@ -8,7 +8,12 @@ import Postwidget from './Postwidget';
 const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
-  let token = localStorage.getItem("token")
+  const token = useSelector((state) => state.token);
+
+
+  useEffect(() => {
+    localStorage.setItem("token", token);
+  }, [token]);
 
   const getPosts = async () => {
     const response = await fetch("https://skrt-api-backend.onrender.com/posts", {

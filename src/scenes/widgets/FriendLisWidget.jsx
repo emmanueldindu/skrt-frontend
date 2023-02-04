@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {Box, Typography, useTheme } from "@mui/material"
 import Friends from '../../components/Friends'
 import WidgetWrapper from '../../components/WidgetWrapper'
@@ -10,8 +10,12 @@ function FriendLisWidget({ userId }) {
     
     const dispatch = useDispatch();
     const { palette } = useTheme();
-    let token = localStorage.getItem("token")
-    const friends = useSelector((state) => state.user.friends);
+    const token = useSelector((state) => state.token);
+  const friends = useSelector((state) => state.user.friends);
+  
+  useEffect(() => {
+    localStorage.setItem("token", token);
+  }, [token]);
   
     const getFriends = async () => {
         const response = await fetch(

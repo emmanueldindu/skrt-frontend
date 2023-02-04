@@ -5,12 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { setFriends } from "../state";
 import FlexBetween from "./FlexBetween";
 import UserImage from "./UserImage";
+import { useEffect } from "react";
 
 const Friends = ({ friendId, name, subtitle, userPicturePath, createdAt }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { _id } = useSelector((state) => state.user);
-    let token = localStorage.getItem("token")
+    const token = useSelector((state) => state.token);
     const friends = useSelector((state) => state.user.friends);
   
     const { palette } = useTheme();
@@ -21,6 +22,11 @@ const Friends = ({ friendId, name, subtitle, userPicturePath, createdAt }) => {
   const date = new Date(createdAt)
 const formatDate = date.toLocaleString();
     const isFriend = friends.find((friend) => friend._id === friendId);
+  
+
+    useEffect(() => {
+      localStorage.setItem("token", token);
+    }, [token]);
   
     const patchFriend = async () => {
       const response = await fetch(

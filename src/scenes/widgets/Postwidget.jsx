@@ -10,7 +10,7 @@ import {Box, Divider, IconButton, Typography, useTheme} from '@mui/material'
 import FlexBetween from '../../components/FlexBetween'
 import Friends from '../../components/Friends'
 import WidgetWrapper from '../../components/WidgetWrapper'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setPost } from '../../state'
 
@@ -30,7 +30,7 @@ const PostWidget = ({
   const [isComments, setIsComments] = useState(false)
   
   const dispatch = useDispatch();
-  let token = localStorage.getItem("token")
+  const token = useSelector((state) => state.token);
 const posts = useSelector((state) => state.posts)
   const loggedInUserId = useSelector((state) => state.user._id)
   const likeCount = Object.keys(likes).length
@@ -39,6 +39,9 @@ const posts = useSelector((state) => state.posts)
   const main = palette.neutral.main;
   const primary = palette.primary.main;
 
+  useEffect(() => {
+    localStorage.setItem("token", token);
+  }, [token]);
 
   const patchLike = async () => {
     const response = await fetch(`https://skrt-api-backend.onrender.com/${postId}/like`, {
