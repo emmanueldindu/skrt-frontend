@@ -57,7 +57,7 @@ function MyPostWidget({ picturePath }) {
       }
 
 
-      const response = await fetch(`https://skrt-api-backend.onrender.com/posts`, {
+      const response = await fetch(`https://skrtapi.onrender.com/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
