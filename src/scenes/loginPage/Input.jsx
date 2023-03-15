@@ -84,7 +84,7 @@ const Input = () => {
     };
   
     const login = async (values, onSubmitProps) => {
-      const loggedInResponse = await fetch("https:https://skrtapi.onrender.com/auth/login", {
+      const loggedInResponse = await fetch("https://skrtapi.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
