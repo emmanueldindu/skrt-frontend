@@ -30,7 +30,7 @@ const formatDate = date.toLocaleString();
   
     const patchFriend = async () => {
       const response = await fetch(
-        `https://skrt-api-backend.onrender.com/users/${_id}/${friendId}`,
+        `https://skrtapi.onrender.com/users/${_id}/${friendId}`,
         {
           method: "PATCH",
           headers: {
