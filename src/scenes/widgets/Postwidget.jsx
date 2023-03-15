@@ -44,7 +44,7 @@ const posts = useSelector((state) => state.posts)
   }, [token]);
 
   const patchLike = async () => {
-    const response = await fetch(`https://skrt-api-backend.onrender.com/${postId}/like`, {
+    const response = await fetch(`https://skrtapi.onrender.com/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
