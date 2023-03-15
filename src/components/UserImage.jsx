@@ -4,7 +4,7 @@ import React from 'react'
 function UserImage({image, size ="60px"}) {
   return (
       <Box width={size} height={size} >
-          <img src={`https://skrt-api-backend.onrender.com/assets/${image}`}
+          <img src={`https://skrtapi.onrender.com/assets/${image}`}
               alt="user"
               width={size}
               height={size}
