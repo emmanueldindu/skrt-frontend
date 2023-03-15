@@ -26,7 +26,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `https://skrt-api-backend.onrender.com${userId}/posts`,
+      `https://skrtapi.onrender.com${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
