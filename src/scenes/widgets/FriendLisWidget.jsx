@@ -19,7 +19,7 @@ function FriendLisWidget({ userId }) {
   
     const getFriends = async () => {
         const response = await fetch(
-          `https://skrt-api-backend.onrender.com/users/${userId}/friends`,
+          `https://skrtapi.onrender.com/users/${userId}/friends`,
           {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
